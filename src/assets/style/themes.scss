@@ -1,0 +1,42 @@
+// Общие стили для карточек с изображениями пёселей
+%card {
+  font-family: "IBMfont";
+  font-weight: 600;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.8rem;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background: linear-gradient(1deg, #000000 -5.53%, rgba(0, 0, 0, 0) 54.45%);
+  }
+}
+
+%card-text {
+  z-index: 2;
+  position: absolute;
+  font-weight: 600;
+  line-height: 2.8rem;
+  letter-spacing: 0.01em;
+  color: $white;
+}
+
+%like {
+  position: absolute;
+  background: make-icon($heart-big) no-repeat top left;
+  z-index: 1;
+  cursor: pointer;
+  width: 2.9rem;
+  height: 2.6rem;
+  border: none;
+  &:hover {
+    background: make-icon($heart-fill) no-repeat top left;
+  }
+}
+
